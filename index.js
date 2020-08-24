@@ -74,7 +74,7 @@ class StaggEKGAccessory {
         this.log(`calling getTargetHeatingCoolingStateCharacteristicHandler`)
         var self = this;
         request({
-            url: "http://localhost:8000/state",
+            url: "http://192.168.20.208:8000/state",
             method: "GET"
         }, function (error, response, body) {
             self.log(`getTargetHeatingCoolingState result:`, body)
@@ -87,7 +87,7 @@ class StaggEKGAccessory {
         this.service.updateCharacteristic(Characteristic.TargetHeatingCoolingState, value)
         this.log(`calling setTargetHeatingCoolingStateCharacteristicHandler`, value)
         request({
-            url: "http://localhost:8000/state",
+            url: "http://192.168.20.208:8000/state",
             method: "POST",
             json: false,
             body: "value=" + value,
@@ -100,7 +100,7 @@ class StaggEKGAccessory {
         this.log(`calling getTargetTemperatureHandler`)
         var self = this;
         request({
-            url: "http://localhost:8000/target_temp",
+            url: "http://192.168.20.208:8000/target_temp",
             method: "GET"
         }, function (error, response, body) {
             self.log(`getTargetTemperatureHandler result:`, body)
@@ -113,7 +113,7 @@ class StaggEKGAccessory {
         this.service.updateCharacteristic(Characteristic.TargetTemperature, value)
         this.log(`calling setTargetTemperatureHandler`, value)
         request({
-            url: "http://localhost:8000/target_temp",
+            url: "http://192.168.20.208:8000/target_temp",
             method: "POST",
             json: false,
             body: "value=" + value.toString(),
@@ -126,7 +126,7 @@ class StaggEKGAccessory {
         this.log(`calling getCurrentTemperatureHandler`)
         var self = this;
         request({
-            url: "http://localhost:8000/current_temp",
+            url: "http://192.168.20.208:8000/current_temp",
             method: "GET"
         }, function (error, response, body) {
             self.log(`getCurrentTemperatureHandler result:`, body)
