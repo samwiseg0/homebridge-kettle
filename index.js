@@ -114,6 +114,7 @@ class StaggEKGAccessory {
     setTargetTemperatureHandler (value, callback) {
         this.service.updateCharacteristic(Characteristic.TargetTemperature, value)
         this.log(`calling setTargetTemperatureHandler`, value)
+        var self = this;
         request({
             url: self.url + "/target_temp",
             method: "POST",
