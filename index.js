@@ -16,7 +16,7 @@ class StaggEKGAccessory {
         this.log = log;
         this.config = config;
         this.service = new Service.Thermostat(this.config.name);
-        this.url = this.config.url
+        this.url = this.config.url;
         this.tempDisplayUnits = 1;
 
         this.maxTemp = 100;
