@@ -8,10 +8,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/calvinmclean/homebridge-kettle.git"
+    "url": "git://github.com/samwiseg0/homebridge-kettle.git"
   },
   "bugs": {
-    "url": "http://github.com/calvinmclean/homebridge-kettle/issues"
+    "url": "http://github.com/samwiseg0/homebridge-kettle/issues"
   },
   "engines": {
     "node": ">=0.12.0",
